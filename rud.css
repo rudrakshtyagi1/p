@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Dancing+Script:wght@700&display=swap');
+
+:root {
+    --deep-red: #800f2f;
+    --bright-red: #ff4d6d;
+    --rose-red: #c9184a;
+    --soft-white: #fff0f3;
+}
+
+body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle, #ff4d6d 0%, #800f2f 100%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--soft-white);
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Cards */
+.lock-card, .content, .letter-paper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: white;
+}
+
+/* Lock Screen Input */
+#unlock-date {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+#unlock-date::placeholder { color: rgba(255, 255, 255, 0.7); }
+
+/* Glowing Buttons */
+button {
+    background: white;
+    color: var(--deep-red);
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Photo Frames with a 'Polaroid' Red Twist */
+.photo-frame {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    border-radius: 5px;
+    transform: rotate(var(--r));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin: 30px;
+    color: var(--deep-red); /* Caption color */
+}
+
+/* Letter Section - Authentic Paper Feel */
+.letter-paper {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--deep-red);
+    border: 2px solid var(--bright-red);
+}
+
+/* Animations */
+.animate-pop { animation: pop 0.8s ease-out; }
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
